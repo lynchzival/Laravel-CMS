@@ -27,7 +27,7 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 
 * [Download Composer](https://getcomposer.org/download/)
-* [Download XAMPP (For SQL Connection)](https://www.apachefriends.org/index.html)
+* [Download XAMPP](https://www.apachefriends.org/index.html)
 * [Create Stripe Account](https://stripe.com/)
 * [Create MailTrap Account](https://mailtrap.io/)
 
