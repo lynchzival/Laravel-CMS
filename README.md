@@ -33,7 +33,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Installation
 
-1. Get your secret public & secret api key from [Stripe](https://stripe.com) & [MailTrap](https://mailtrap.io)
+1. Get your public & secret api key from [Stripe](https://stripe.com) & [MailTrap](https://mailtrap.io)
 2. Clone the repo
    ```sh
    git clone https://github.com/lynchzival/Laravel-CMS.git
