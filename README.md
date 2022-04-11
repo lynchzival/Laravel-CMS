@@ -38,7 +38,10 @@ To get a local copy up and running follow these simple steps.
 
 ### Installation
 
-1. Get your public & secret api key from [Stripe](https://stripe.com) & [Mailtrap](https://mailtrap.io)
+1. Get your api key from [Stripe](https://dashboard.stripe.com/test/apikeys) & SMTP settings from [Mailtrap](https://mailtrap.io)
+   
+   ![stripe_api](https://raw.githubusercontent.com/lynchzival/Laravel-CMS/main/screenshot/6050469652bc9a2aa6ea39ef25bd4980a723ad2a.png)
+   ![mailtrap_api](https://raw.githubusercontent.com/lynchzival/Laravel-CMS/main/screenshot/Screenshot%202022-04-11%20at%2019-44-52%20Mailtrap%20-%20Safe%20Email%20Testing.png)
 2. Clone the repo
    ```sh
    git clone https://github.com/lynchzival/Laravel-CMS.git
