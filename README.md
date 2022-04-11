@@ -29,11 +29,16 @@ To get a local copy up and running follow these simple steps.
 * [Download Composer](https://getcomposer.org/download/)
 * [Download XAMPP](https://www.apachefriends.org/index.html)
 * [Create Stripe Account](https://stripe.com/)
-* [Create MailTrap Account](https://mailtrap.io/)
+* [Create Mailtrap Account](https://mailtrap.io/)
+
+1. In **Stripe**, create subscription plans in product section with recurring option.
+  ![stripe_screenshot](https://raw.githubusercontent.com/lynchzival/Laravel-CMS/main/screenshot/Screenshot%202022-04-11%20at%2015-37-00%20Products%20%E2%80%93%20New%20Business%20%E2%80%93%20Stripe%20Test.png)
+2. In **Mailtrap**, create new inbox
+  ![mailtrap_screenshot](https://raw.githubusercontent.com/lynchzival/Laravel-CMS/main/screenshot/Screenshot%202022-04-11%20at%2015-42-33%20Mailtrap%20-%20Safe%20Email%20Testing.png)
 
 ### Installation
 
-1. Get your public & secret api key from [Stripe](https://stripe.com) & [MailTrap](https://mailtrap.io)
+1. Get your public & secret api key from [Stripe](https://stripe.com) & [Mailtrap](https://mailtrap.io)
 2. Clone the repo
    ```sh
    git clone https://github.com/lynchzival/Laravel-CMS.git
