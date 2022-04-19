@@ -28,6 +28,7 @@ To get a local copy up and running follow these simple steps.
 
 * [Download Composer](https://getcomposer.org/download/)
 * [Download XAMPP](https://www.apachefriends.org/index.html)
+* [PHP intl extension](https://www.php.net/manual/en/book.intl.php)
 * [Create Stripe Account](https://stripe.com/)
 * [Create Mailtrap Account](https://mailtrap.io/)
 
