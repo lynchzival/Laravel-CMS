@@ -21,7 +21,6 @@ class DatabaseSeeder extends Seeder
         $this -> call(RoleSeeder::class);
         $this -> call(UserSeeder::class);
         $this -> call(ArticleSeeder::class);
-        $this -> call(PlanSeeder::class);
         $this -> call(PremiumArticleSeeder::class);
     }
 }
