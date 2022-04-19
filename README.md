@@ -77,15 +77,18 @@ To get a local copy up and running follow these simple steps.
    ```sh
    php artisan key:generate
    ```
-7. Database migration & seeding
+7. Migration
    ```sh
    php artisan migrate
+   ```
+8. Seeding
+   ```sh
    php artisan db:seed
    ```
-8. Run project
-   ```sh
-   php artisan serve
-   ```
+10. Run Project
+       ```sh
+       php artisan serve
+       ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
