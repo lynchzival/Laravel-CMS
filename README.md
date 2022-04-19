@@ -46,15 +46,9 @@ To get a local copy up and running follow these simple steps.
    ```sh
    git clone https://github.com/lynchzival/Laravel-CMS.git
    ```
-3. Rename .env.example to .env
-4. Generate Laravel application key
-   ```sh
-   php artisan key:generate
-   ```
-5. Update config information in `.env`
-   ```env
-   APP_KEY="YOUR GENERATED KEY"
-   
+3. Copy and rename .env.example to .env
+4. Update config information in `.env`
+   ```env   
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
    DB_PORT="YOUR DB PORT"
@@ -74,9 +68,13 @@ To get a local copy up and running follow these simple steps.
    MAIL_FROM_ADDRESS="ANY EMAIL YOU WANT"
    MAIL_FROM_NAME="${APP_NAME}"
    ```
-6. Install Composer dependencies
+5. Install Composer dependencies
    ```sh
    composer install
+   ```
+6. Generate Laravel application key
+   ```sh
+   php artisan key:generate
    ```
 7. Database migration & seeding
    ```sh
