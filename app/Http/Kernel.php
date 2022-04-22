@@ -70,5 +70,6 @@ class Kernel extends HttpKernel
         'adminOrOwner' => \App\Http\Middleware\EnsureUserIsAdminOrOwner::class,
         'notMyself' => \App\Http\Middleware\EnsureUserIsNotSelf::class,
         'notSubscribed' => \App\Http\Middleware\EnsureUserIsNotSubscribed::class,
+        'isSubscribed' => \App\Http\Middleware\EnsureUserIsSubscribed::class,
     ];
 }

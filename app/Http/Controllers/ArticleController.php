@@ -154,14 +154,17 @@ class ArticleController extends Controller
         $article = Article::where('slug', $slug) -> firstOrFail();
 
         if ($article -> is_premium){
+
             if (Auth::check()){
                 $user = auth() -> user();
-                if ($user -> isReader() && !$user -> subscribed('default')){
+                if ($user -> isReader() 
+                && !$user -> subscribed('default')){
                     return redirect('/subscription');
                 }
             } else {
                 return redirect() -> route('login');
             }
+            
         }
 
         $article->increment('view_count');

@@ -22,16 +22,19 @@
                         <label class="text-uppercase mb-0 text-success">active</label>
 
                         @if (Auth::user()->subscription('default')->onGracePeriod())
-                            <form action="{{ route('profile.subscription.resume') }}" method="POST">
-                                @csrf
-                                <button class="btn btn-sm btn-success text-uppercase">resubscribe</button>
-                            </form>
+                            {{-- @if (!Auth::user()->subscription('default')->canceled()) --}}
+                                <form action="{{ route('profile.subscription.resume') }}" method="POST">
+                                    @csrf
+                                    <button class="btn btn-sm btn-success text-uppercase">resubscribe</button>
+                                </form>
+                            {{-- @endif --}}
                         @else
                             <form action="{{ route('profile.subscription.cancel') }}" method="POST">
                                 @csrf
                                 <button class="btn btn-sm btn-danger text-uppercase">unsubscribe</button>
                             </form>
                         @endif
+
                     </div>
 
                     <div class="form-group mt-5">

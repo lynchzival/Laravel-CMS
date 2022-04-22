@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class EnsureUserIsReader
+class EnsureUserIsSubscribed
 {
     /**
      * Handle an incoming request.
@@ -16,10 +16,9 @@ class EnsureUserIsReader
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!$request->user()->isReader()) {
-            return redirect('/');
+        if (!$request->user()->subscribed('default')) {
+            return redirect('/subscription');
         }
-        
         return $next($request);
     }
 }

@@ -77,6 +77,7 @@ class CategoryController extends Controller
         }
 
         if ($request -> has('sort')) {
+
             $articles -> when($request -> sort == 'asc', function($query){
                 return $query -> orderBy('created_at', 'asc');
             }) -> when($request -> sort == 'desc', function($query){
@@ -84,6 +85,7 @@ class CategoryController extends Controller
             }) -> when($request -> sort == 'views', function($query){
                 return $query -> orderBy('view_count', 'desc');
             });
+            
         }
 
         if ($request -> has('type') && $request -> type != 'all') {

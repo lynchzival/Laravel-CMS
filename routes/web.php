@@ -134,13 +134,9 @@ Route::group([
         Route::view('/two-factor/toggle', 'profile.toggle-two-factor') 
         -> name('profile.two-factor');
 
-        Route::get('/subscription', function(){
-            if (Auth::user() -> subscribed('default')){
-                return view('profile.subscription');
-            } else {
-                return redirect('/subscription');
-            }
-        }) -> name('profile.subscription');
+        Route::view('/subscription', 'profile.subscription') 
+        -> name('profile.subscription')
+        -> middleware('isSubscribed', 'reader');
         
         Route::post('/subscription/cancel', [PaymentController::class, 'destroy'])
         -> name('profile.subscription.cancel');
@@ -182,12 +178,11 @@ Route::group([
     ], function(){
         Route::get('/payment', [PaymentController::class, 'index']) 
         -> name('payment.index');
+        Route::get('/subscription', [PaymentController::class, 'plan']);
         Route::post('/payment', [PaymentController::class, 'store'])
         ->name('payment.store');
     });
 });
-
-Route::get('/subscription', [PaymentController::class, 'plan']);
 
 /**
  * Article routes
