@@ -6,7 +6,7 @@
     a completely rewritten CMS from previous project with Laravel, flash with new features.
   </p>
   
-  ![homepage_screenshot](https://raw.githubusercontent.com/lynchzival/Laravel-CMS/main/screenshot/Screenshot%202022-04-11%20at%2010-31-38%20Home.png)
+  ![homepage_screenshot](https://raw.githubusercontent.com/lynchzival/Laravel-CMS/48ff2e371464b7765772ca5e565fde238b57a00b/screenshot/Screenshot%202022-04-11%20at%2010-31-38%20Home.png)
 </div>
 
 ### Built With
