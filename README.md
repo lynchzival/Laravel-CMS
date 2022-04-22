@@ -33,16 +33,16 @@ To get a local copy up and running follow these simple steps.
 * [Create Mailtrap Account](https://mailtrap.io/)
 
 1. In **Stripe**, create subscription plans in product section with recurring option.
-  ![stripe_screenshot](https://raw.githubusercontent.com/lynchzival/Laravel-CMS/main/screenshot/Screenshot%202022-04-11%20at%2015-37-00%20Products%20%E2%80%93%20New%20Business%20%E2%80%93%20Stripe%20Test.png)
+  ![stripe_screenshot](https://raw.githubusercontent.com/lynchzival/Laravel-CMS/master/screenshot/Screenshot%202022-04-11%20at%2015-37-00%20Products%20%E2%80%93%20New%20Business%20%E2%80%93%20Stripe%20Test.png)
 2. In **Mailtrap**, create new inbox
-  ![mailtrap_screenshot](https://raw.githubusercontent.com/lynchzival/Laravel-CMS/main/screenshot/Screenshot%202022-04-11%20at%2015-42-33%20Mailtrap%20-%20Safe%20Email%20Testing.png)
+  ![mailtrap_screenshot](https://github.com/lynchzival/Laravel-CMS/blob/master/screenshot/Screenshot%202022-04-11%20at%2015-42-33%20Mailtrap%20-%20Safe%20Email%20Testing.png?raw=true)
 
 ### Installation
 
 1. Get your api key from [Stripe](https://dashboard.stripe.com/test/apikeys) & SMTP settings from [Mailtrap](https://mailtrap.io/inboxes) inbox.
    
-   ![stripe_api](https://raw.githubusercontent.com/lynchzival/Laravel-CMS/main/screenshot/6050469652bc9a2aa6ea39ef25bd4980a723ad2a.png)
-   ![mailtrap_api](https://raw.githubusercontent.com/lynchzival/Laravel-CMS/main/screenshot/Screenshot%202022-04-11%20at%2019-44-52%20Mailtrap%20-%20Safe%20Email%20Testing.png)
+   ![stripe_api](https://github.com/lynchzival/Laravel-CMS/blob/master/screenshot/6050469652bc9a2aa6ea39ef25bd4980a723ad2a.png?raw=true)
+   ![mailtrap_api](https://github.com/lynchzival/Laravel-CMS/blob/master/screenshot/Screenshot%202022-04-11%20at%2019-44-52%20Mailtrap%20-%20Safe%20Email%20Testing.png?raw=true)
 2. Clone the repo
    ```sh
    git clone https://github.com/lynchzival/Laravel-CMS.git
