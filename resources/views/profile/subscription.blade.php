@@ -18,23 +18,31 @@
                         <h1 class="text-uppercase my-5 text-black">Subscription</h1>
                     </div>
 
-                    <div class="d-flex justify-content-between align-items-center bg-light shadow-sm rounded-3 p-3">
-                        <label class="text-uppercase mb-0 text-success">active</label>
-
-                        @if (Auth::user()->subscription('default')->onGracePeriod())
-                            {{-- @if (!Auth::user()->subscription('default')->canceled()) --}}
-                                <form action="{{ route('profile.subscription.resume') }}" method="POST">
+                    <div class="align-items-center bg-light shadow-sm rounded-3 p-3">
+                        <div class="d-flex justify-content-between">
+                            <label class="text-uppercase mb-0 text-success">active</label>
+                            @if (Auth::user()->subscription('default')->onGracePeriod())
+                                {{-- @if (!Auth::user()->subscription('default')->canceled()) --}}
+                                    <form action="{{ route('profile.subscription.resume') }}" method="POST">
+                                        @csrf
+                                        <button class="btn btn-sm btn-success text-uppercase">resubscribe</button>
+                                    </form>
+                                {{-- @endif --}}
+                            @else
+                                <form action="{{ route('profile.subscription.cancel') }}" method="POST">
                                     @csrf
-                                    <button class="btn btn-sm btn-success text-uppercase">resubscribe</button>
+                                    <button class="btn btn-sm btn-danger text-uppercase">unsubscribe</button>
                                 </form>
-                            {{-- @endif --}}
-                        @else
-                            <form action="{{ route('profile.subscription.cancel') }}" method="POST">
-                                @csrf
-                                <button class="btn btn-sm btn-danger text-uppercase">unsubscribe</button>
-                            </form>
-                        @endif
+                            @endif
+                        </div>
 
+                        <div class="d-flex justify-content-between mt-4">
+                            <span class="text-uppercase">
+                                <i class="fi fi-rr-credit-card"></i>
+                                <small>{{ Auth::user() -> pm_type }}</small>
+                            </span>
+                            <span>&#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226; {{ Auth::user() -> pm_last_four }}</span>
+                        </div>
                     </div>
 
                     <div class="form-group mt-5">
@@ -47,11 +55,6 @@
                             {{ date('l j, M Y', Auth::user()->subscription('default')->asStripeSubscription()->current_period_end )}}
                         </div>
                     </div>
-
-                    {{ 
-                        // get the subscription plan name
-                        Auth::user()->subscription('default')->asStripeSubscription()->plan->nickname
-                    }}
 
                 </div>
             </div>
