@@ -1,9 +1,9 @@
 <div id="top"></div>
 
-<h3 align="center">Laravel CMS</h3>
+<h3 align="center">Laravel SaaS CMS</h3>
 
   <p align="center">
-    a completely rewritten CMS from previous project with Laravel, flash with new features.
+    a completely rewritten CMS from previous project with Laravel, and subscription-based model.
   </p>
   
   ![homepage_screenshot](https://raw.githubusercontent.com/lynchzival/Laravel-CMS/48ff2e371464b7765772ca5e565fde238b57a00b/screenshot/Screenshot%202022-04-11%20at%2010-31-38%20Home.png)
