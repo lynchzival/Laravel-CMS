@@ -2,6 +2,20 @@
 
 @section('meta')
     <meta name="_token" content="{{ csrf_token() }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ URL::current() }}">
+    <meta property="og:title" content="{{ $article -> title }}">
+    <meta property="og:description" content="{{ strip_tags($article -> brief())  }}">
+    <meta property="og:image" content="{{ $article -> getThumbnail() }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ URL::current() }}">
+    <meta property="twitter:title" content="{{ $article -> title }}">
+    <meta property="twitter:description" content="{{ strip_tags($article -> brief()) }}">
+    <meta property="twitter:image" content="{{ $article -> getThumbnail() }}">
 @endsection
 
 @section('navbrand')
@@ -77,6 +91,9 @@
 
             <div class="row text-left mt-3">
                 <div class="col-12 col-lg-9 px-0">
+
+                    <div class="sharethis-inline-share-buttons"></div>
+
                     <div class="rounded-3 p-3 my-3 bg-transparent">
                         <h4 class="text-uppercase mb-4">Comment 
                             <span>
@@ -107,6 +124,9 @@
 @endsection
 
 @section('scripts')
+    <script type="text/javascript"
+    src="https://platform-api.sharethis.com/js/sharethis.js#property=6182c76a8afacc001dd07677&product=inline-share-buttons" 
+    async="async"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.10.3/tinymce.min.js" integrity="sha512-ykwx/3dGct2v2AKqqaDCHLt1QFVzdcpad7P5LfgpqY8PJCRqAqOeD4Bj63TKnSQy4Yok/6QiCHiSV/kPdxB7AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{ asset('js/like_article.js') }}"></script>
     <script src="{{ asset('js/favorite_article.js') }}"></script>
